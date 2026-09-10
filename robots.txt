@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wealth.ipclub29.com/sitemap.xml
