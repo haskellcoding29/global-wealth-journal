@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Global Sovereign Wealth Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 400: '#dfb743', 500: '#c59b27' },
+                        navy: { 900: '#070d19', 950: '#030712' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy-950 text-slate-300 font-sans min-h-screen flex flex-col antialiased">
+    <header class="border-b border-slate-800 bg-navy-950/90 py-4 px-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-serif text-lg font-bold text-slate-100 flex items-center">
+                <span class="text-gold-500 mr-2">GS</span> The Global Sovereign Wealth Journal
+            </a>
+            <a href="index.html" class="text-xs text-gold-400 hover:underline">홈으로</a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12 flex-grow">
+        <div class="mb-8">
+            <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">EDITORIAL BOARD & MISSION</span>
+            <h1 class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mt-2 mb-4">The Global Sovereign Wealth
+                Journal 소개</h1>
+            <p class="text-slate-400 leading-relaxed text-sm sm:text-base">
+                본 저널은 전 세계 고액 자산가, 패밀리 오피스, 독립 투자자를 위해 오프쇼어 사익재단, 영토주의 조세 구조, 그리고 카르다노 기반의 기관급 RealFi & RWA 생태계를 심층 연구하는
+                독립형 글로벌 씽크탱크입니다.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+            <div class="bg-navy-900 border border-slate-800 p-6 rounded-xl">
+                <h3 class="font-serif font-bold text-gold-400 text-lg mb-2">🏛️ 오프쇼어 자산방어 리서치</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    파나마 사익재단법(Law 25), 와이오밍 LLC Act, 파나마 조세법(Código Fiscal) 등 각국 정부의 공식 법령 및 관보에 기반하여 가문의 100년 영구 자산방어
+                    구조를 연구합니다.
+                </p>
+            </div>
+            <div class="bg-navy-900 border border-slate-800 p-6 rounded-xl">
+                <h3 class="font-serif font-bold text-emerald-400 text-lg mb-2">🌾 기관급 RealFi & RWA 인텔리전스</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    미 국채 1:1 담보 Mehen USDM, Liqwid 스마트 컨트랙트 감사 보고서 및 카르다노 공식 온체인 메트릭을 바탕으로 무과세 현금흐름과 RWA 금융을 정밀 분석합니다.
+                </p>
+            </div>
+        </div>
+
+        <!-- Research Baseline & Compliance -->
+        <div class="bg-navy-900/60 border border-slate-800 p-6 rounded-xl mb-8">
+            <h3 class="font-serif font-bold text-slate-200 text-base mb-3 flex items-center">
+                <i data-lucide="building-2" class="w-4 h-4 mr-2 text-gold-400"></i> 발행사 및 운영 주체 (Corporate Publisher)
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                본 저널(The Global Sovereign Wealth Journal)은 미국 와이오밍주 법인인 <strong>GOH ASCENT HOLDINGS LLC (Wyoming,
+                    USA)</strong>의 글로벌 미디어 및 경제 리서치 부서에 의해 공식 발행·운영됩니다.
+            </p>
+            <div class="p-4 bg-amber-950/20 border border-amber-500/30 rounded-lg text-xs text-slate-300">
+                <strong class="text-amber-400">⚖️ 법적·세무적 책임 제한 고지:</strong> 본 저널의 콘텐츠는 순수 학술 및 정보 전달 목적으로만 작성되며, 개별
+                법률/세무/투자 자문이 아닙니다. 실제 법인 설립 및 금융 의사결정으로 인해 발생하는 손익에 대해 본 저널 및 발행 법인은 일체의 법적 배상 책임을 부담하지 않습니다.
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8">
+            <h2 class="font-serif text-xl font-bold text-slate-200 mb-3">연락 및 제휴</h2>
+            <p class="text-xs text-slate-400">공식 연구 자료 인용, 리포트 기고 및 VIP 제휴 문의는 <a href="contact.html"
+                    class="text-gold-400 underline">문의 페이지</a>를 이용해 주시기 바랍니다.</p>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        &copy; 2026 The Global Sovereign Wealth Journal. Published by GOH ASCENT HOLDINGS LLC, Wyoming, USA. All rights
+        reserved.
+    </footer>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

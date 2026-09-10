@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의 및 리서치 제휴 (Contact) | The Global Sovereign Wealth Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 400: '#dfb743', 500: '#c59b27' },
+                        navy: { 900: '#070d19', 950: '#030712' }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-navy-950 text-slate-300 font-sans min-h-screen flex flex-col antialiased selection:bg-gold-500 selection:text-black">
+    <header class="border-b border-slate-800 bg-navy-950/90 py-4 px-4 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-serif text-lg font-bold text-slate-100 flex items-center">
+                <span
+                    class="w-6 h-6 rounded bg-gold-500 flex items-center justify-center text-black font-bold text-xs mr-2">GS</span>
+                The Global Sovereign Wealth Journal
+            </a>
+            <a href="index.html" class="text-xs text-gold-400 hover:underline flex items-center">
+                <i data-lucide="arrow-left" class="w-3.5 h-3.5 mr-1 inline"></i> 홈으로 돌아가기
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12 flex-grow">
+        <div class="mb-10 text-center sm:text-left">
+            <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">EDITORIAL & RESEARCH INQUIRIES</span>
+            <h1 class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mt-2 mb-3">연구 제휴 및 문의 (Contact)</h1>
+            <p class="text-sm text-slate-400 max-w-2xl leading-relaxed">
+                오프쇼어 패밀리 오피스 리서치 인용, 카르다노 RealFi 데이터 분석 협업, 또는 편집국 제휴 문의를 남겨주시면 편집위원회 검토 후 답변드립니다.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Contact Channels -->
+            <div class="space-y-4 md:col-span-1">
+                <div class="bg-navy-900 border border-slate-800 p-5 rounded-xl">
+                    <div class="flex items-center space-x-3 text-gold-400 mb-2">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <h3 class="font-bold text-sm text-slate-200">편집국 이메일</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 mb-2">공식 리서치 기고 및 언론 문의</p>
+                    <a href="mailto:editorial@sovereignwealthjournal.org"
+                        class="text-xs text-gold-400 hover:underline font-mono">editorial@sovereignwealthjournal.org</a>
+                </div>
+
+                <div class="bg-navy-900 border border-slate-800 p-5 rounded-xl">
+                    <div class="flex items-center space-x-3 text-emerald-400 mb-2">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        <h3 class="font-bold text-sm text-slate-200">보안 통신 (PGP/Signal)</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        오프쇼어 자산방어 및 보안 리서치 제보는 암호화 통신을 우선 권장합니다.
+                    </p>
+                </div>
+
+                <div class="bg-navy-900 border border-slate-800 p-5 rounded-xl">
+                    <div class="flex items-center space-x-3 text-blue-400 mb-2">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                        <h3 class="font-bold text-sm text-slate-200">글로벌 리서치 데스크</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>GOH ASCENT HOLDINGS LLC</strong><br>
+                        Wyoming, United States<br>
+                        Panama City, Republic of Panama
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-navy-900 border border-slate-800 p-6 sm:p-8 rounded-xl md:col-span-2">
+                <h3 class="font-serif font-bold text-slate-200 text-lg mb-4">온라인 문의 접수</h3>
+                <form
+                    onsubmit="event.preventDefault(); alert('문의가 성공적으로 접수되었습니다. 편집국 검토 후 기재하신 이메일로 회신드리겠습니다.'); this.reset();"
+                    class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-1">성함 / 담당자명</label>
+                            <input type="text" required placeholder="홍길동"
+                                class="w-full bg-navy-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-1">이메일 주소</label>
+                            <input type="email" required placeholder="name@institution.com"
+                                class="w-full bg-navy-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-gold-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">문의 분류</label>
+                        <select
+                            class="w-full bg-navy-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-gold-500">
+                            <option value="research">오프쇼어 자산방어 / 사익재단 리서치 인용</option>
+                            <option value="realfi">카르다노 RealFi & USDM 데이터 협력</option>
+                            <option value="editorial">칼럼 기고 및 편집국 제휴</option>
+                            <option value="general">기타 일반 문의</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">문의 내용</label>
+                        <textarea rows="5" required placeholder="문의하실 내용을 상세히 기재해 주십시오..."
+                            class="w-full bg-navy-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-gold-500"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-gold-500 to-amber-600 text-black font-bold py-2.5 px-4 rounded-lg hover:brightness-110 transition shadow-lg text-sm flex items-center justify-center">
+                        <i data-lucide="send" class="w-4 h-4 mr-2"></i> 문의 메시지 전송
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 bg-navy-900/80">
+        <div
+            class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+            <span>&copy; 2026 The Global Sovereign Wealth Journal. Published by GOH ASCENT HOLDINGS LLC, Wyoming, USA.
+                All rights reserved.</span>
+            <div class="flex space-x-4">
+                <a href="privacy.html" class="hover:text-gold-400">개인정보처리방침</a>
+                <a href="terms.html" class="hover:text-gold-400">이용약관</a>
+                <a href="contact.html" class="text-gold-400">문의하기</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
