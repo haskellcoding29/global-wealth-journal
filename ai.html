@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Private AI Workspace | The Global Sovereign Wealth Journal</title>
+    <meta name="description" content="Proton Lumo-grade Zero-Logging Confidential AI Workspace for Sovereign Wealth & Intelligence.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            500: '#c59b27',
+                            400: '#dfb743',
+                            600: '#9e751a'
+                        },
+                        navy: {
+                            900: '#0b1120',
+                            950: '#030712'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0b1120; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+</head>
+
+<body class="bg-navy-950 text-slate-100 h-full flex flex-col font-sans antialiased overflow-hidden">
+    <!-- Top Bar -->
+    <header class="h-14 border-b border-slate-800 bg-navy-900/90 backdrop-blur px-4 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-2 text-slate-300 hover:text-white text-xs font-bold transition">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">저널 홈으로</span>
+            </a>
+            <span class="text-slate-700">|</span>
+            <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="font-serif font-black text-sm text-gold-400">Sovereign Private AI Workspace</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-mono font-bold">Zero-Logging Active</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button onclick="clearCurrentChat()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition flex items-center gap-1.5">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5 text-rose-400"></i>
+                <span>대화 초기화</span>
+            </button>
+            <button onclick="exportChatMarkdown()" class="px-3 py-1.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                <span>리포트 저장 (MD)</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="flex-1 flex overflow-hidden">
+        <!-- Sidebar: Modes & History -->
+        <aside class="w-64 border-r border-slate-800 bg-navy-900/50 p-4 hidden md:flex flex-col justify-between shrink-0">
+            <div class="space-y-4">
+                <div>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2 font-mono">인텔리전스 모드 (Focus Mode)</span>
+                    <div class="space-y-1.5">
+                        <button onclick="setAIMode('wealth')" id="mode-btn-wealth" class="w-full text-left px-3 py-2.5 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-300 text-xs font-bold transition flex items-center gap-2">
+                            <span>🏛️</span> 파나마 0% 세무 & 웰스
+                        </button>
+                        <button onclick="setAIMode('realfi')" id="mode-btn-realfi" class="w-full text-left px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700 text-slate-400 text-xs font-medium hover:text-white transition flex items-center gap-2">
+                            <span>💵</span> RealFi 국채 달러 일드
+                        </button>
+                        <button onclick="setAIMode('brainstorm')" id="mode-btn-brainstorm" class="w-full text-left px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700 text-slate-400 text-xs font-medium hover:text-white transition flex items-center gap-2">
+                            <span>🧠</span> 비즈니스 기획 & 증류
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800/80">
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2 font-mono">프라이버시 보증</span>
+                    <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-slate-400 leading-relaxed space-y-1.5">
+                        <div class="flex items-center gap-1.5 text-emerald-400 font-bold">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 100% 로컬 브라우저 처리
+                        </div>
+                        <div>서버 DB에 대화 기록 일절 미저장</div>
+                        <div>Proton Lumo식 제로 액세스 보장</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-[10px] text-slate-500 font-mono text-center">
+                The Global Sovereign Wealth Journal
+            </div>
+        </aside>
+
+        <!-- Chat Area -->
+        <main class="flex-1 flex flex-col bg-navy-950 relative overflow-hidden">
+            <!-- Messages Scroll -->
+            <div id="workspace-chat-messages" class="flex-1 overflow-y-auto p-4 sm:p-8 space-y-5 max-w-4xl w-full mx-auto">
+                <!-- Welcome Banner -->
+                <div class="text-center py-6 border-b border-slate-800/80 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mx-auto mb-3 shadow-lg">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-white">Sovereign Private AI Workspace</h2>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-md mx-auto">
+                        외부 서버의 감시나 로그 기록 없이, 100% 기밀이 보장되는 대표님 전용 로컬 AI 작업 공간입니다.
+                    </p>
+                </div>
+
+                <!-- Initial Bot Message -->
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-xl bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 text-sm">
+                        🏛️
+                    </div>
+                    <div class="bg-navy-900/90 border border-slate-800 p-4 sm:p-5 rounded-2xl rounded-tl-sm text-slate-200 text-xs sm:text-sm leading-relaxed max-w-[90%] shadow-lg space-y-3">
+                        <p>
+                            안녕하세요, 대표님. <strong>Sovereign Private AI</strong>가 준비되었습니다. 현재 <strong class="text-gold-400" id="current-mode-label">파나마 0% 세무 & 웰스 모드</strong>로 설정되어 있습니다.
+                        </p>
+                        <p class="text-slate-400">
+                            가문 자산 방어, 와이오밍 LLC, 0% 영토세 설계, RealFi 국채 캐시플로우, 비즈니스 기획 등 기밀 주제에 대해 자유롭게 질문하거나 브레인스토밍하십시오.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Bar -->
+            <div class="p-4 bg-navy-900/90 border-t border-slate-800 shrink-0">
+                <div class="max-w-4xl mx-auto">
+                    <form id="workspace-form" onsubmit="handleWorkspaceSubmit(event)" class="flex items-center gap-3">
+                        <input type="text" id="workspace-input" placeholder="기밀 질문 또는 기획안을 입력하세요..." 
+                            class="flex-1 bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 font-sans shadow-inner" />
+                        <button type="submit" 
+                            class="px-5 py-3.5 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-black text-xs sm:text-sm transition shadow-lg shadow-gold-500/20 flex items-center gap-1.5 shrink-0">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span class="hidden sm:inline">질의하기</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let currentMode = 'wealth';
+        let chatHistory = [];
+
+        function setAIMode(mode) {
+            currentMode = mode;
+            ['wealth', 'realfi', 'brainstorm'].forEach(m => {
+                const btn = document.getElementById('mode-btn-' + m);
+                if (!btn) return;
+                if (m === mode) {
+                    btn.className = "w-full text-left px-3 py-2.5 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-300 text-xs font-bold transition flex items-center gap-2";
+                } else {
+                    btn.className = "w-full text-left px-3 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700 text-slate-400 text-xs font-medium hover:text-white transition flex items-center gap-2";
+                }
+            });
+            const labelMap = { wealth: "파나마 0% 세무 & 웰스 모드", realfi: "RealFi 국채 달러 일드 모드", brainstorm: "비즈니스 기획 & 증류 모드" };
+            const labelEl = document.getElementById('current-mode-label');
+            if (labelEl) labelEl.innerText = labelMap[mode];
+        }
+
+        const modeKnowledge = {
+            wealth: {
+                keywords: ['파나마', '재단', '세무', '와이오밍', 'llc', 'cfc', '거주자', '상속', '신탁', '자산'],
+                defaultResponse: "🏛️ [파나마 사익재단 & 패밀리 오피스 주권 인텔리전스]:\n• 0% 영토주의(Territorial Tax): 해외 발생 배당, 매매차익, 암호화폐 자본이득 영구 비과세.\n• 자산 격리: 재단 자산은 법적으로 분리되어 해외 법원 판결로도 강제 집행 불가.\n• 와이오밍 LLC: 충실한 차징오더(Charging Order) 보호 및 비거주자 패스스루 과세 면제.\n• CFC 방어: 파나마 실거주자(Resident) 지위 확보로 국내 세법상 간주배당 과세를 완벽히 차단합니다."
+            },
+            realfi: {
+                keywords: ['realfi', 'usdm', 'susdrf', '국채', '일드', '이자', '에이다', '스테이킹', '캐시플로우', 'joy', 'hope'],
+                defaultResponse: "💵 [RealFi & 온체인 자산 캐시플로우 인텔리전스]:\n• USDM: 단기 미국 국채 및 MMF 100% 담보, 락업 0% 즉시 상환 가능한 디지털 달러.\n• sUSDrf: USDrf 예치 시 연 6~8% 수준의 복리 실물 달러 이자를 지갑으로 직접 수취.\n• JOY / HOPE 스테이크 풀: 4대 독립 베어메탈 인프라 기반 5일 주기 비수탁 에이다 보상 지급.\n• 원금을 훼손하지 않고 2중 패시브 캐시플로우를 완성하는 패밀리 오피스 핵심 파이프라인입니다."
+            },
+            brainstorm: {
+                keywords: ['기획', '아이디어', '에듀테크', '스페인어', '한국어', '포털', '비즈니스', '수익', '워크스페이스'],
+                defaultResponse: "🧠 [비즈니스 기획 & 지식 증류 인텔리전스]:\n• 카르파시 3계층 지식 증류 아키텍처: 1차 사료 수집 ➔ 정제된 위키(LLM_wiki) ➔ 실행 가능한 비즈니스 제품화.\n• 다국어 에듀테크 시너지: 30일 완성 한국어 포털(korean.ipclub29.com) & PanamaES 스페인어 언어학 엔진 연계.\n• No-Ad 자사 IP 자산화: 외부 광고에 의존하지 않고 고부가가치 연구 리포트와 교육으로 자립적 고수익 구조를 확립합니다."
+            }
+        };
+
+        function appendWorkspaceMessage(sender, text) {
+            const container = document.getElementById('workspace-chat-messages');
+            if (!container) return;
+            const isUser = sender === 'user';
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `flex items-start gap-3 ${isUser ? 'flex-row-reverse' : ''}`;
+
+            const avatar = isUser
+                ? '<div class="w-8 h-8 rounded-xl bg-gold-600 flex items-center justify-center text-black font-bold shrink-0 text-xs">You</div>'
+                : '<div class="w-8 h-8 rounded-xl bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 text-sm">🏛️</div>';
+
+            const bubbleClass = isUser
+                ? 'bg-gradient-to-r from-gold-600 to-amber-600 text-black font-medium rounded-2xl rounded-tr-sm p-4 max-w-[85%] leading-relaxed shadow-lg text-xs sm:text-sm'
+                : 'bg-navy-900/90 border border-slate-800 text-slate-200 rounded-2xl rounded-tl-sm p-4 sm:p-5 max-w-[85%] leading-relaxed whitespace-pre-line shadow-lg text-xs sm:text-sm';
+
+            msgDiv.innerHTML = `${avatar}<div class="${bubbleClass}">${text}</div>`;
+            container.appendChild(msgDiv);
+            container.scrollTop = container.scrollHeight;
+
+            chatHistory.push({ sender, text, timestamp: new Date().toISOString() });
+        }
+
+        function handleWorkspaceSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('workspace-input');
+            const text = input?.value.trim();
+            if (!text) return;
+
+            appendWorkspaceMessage('user', text);
+            input.value = '';
+
+            setTimeout(() => {
+                const modeData = modeKnowledge[currentMode] || modeKnowledge.wealth;
+                appendWorkspaceMessage('bot', modeData.defaultResponse);
+            }, 400);
+        }
+
+        function clearCurrentChat() {
+            if (confirm("현재 대화 내역을 모두 초기화하시겠습니까? (로컬 메모리에서 즉시 영구 삭제됩니다)")) {
+                const container = document.getElementById('workspace-chat-messages');
+                if (container) {
+                    container.innerHTML = `
+                    <div class="text-center py-6 border-b border-slate-800/80 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mx-auto mb-3 shadow-lg">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h2 class="font-serif text-xl sm:text-2xl font-bold text-white">Sovereign Private AI Workspace</h2>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-md mx-auto">
+                            대화 내역이 완전히 초기화되었습니다. 새로운 기밀 질의를 시작하십시오.
+                        </p>
+                    </div>`;
+                    chatHistory = [];
+                    if (window.lucide) lucide.createIcons();
+                }
+            }
+        }
+
+        function exportChatMarkdown() {
+            if (chatHistory.length === 0) {
+                alert("내보낼 대화 내역이 없습니다.");
+                return;
+            }
+            let md = `# Sovereign Private AI Confidential Report\n\n**Date:** ${new Date().toLocaleString()}\n**Mode:** ${currentMode.toUpperCase()}\n\n---\n\n`;
+            chatHistory.forEach(item => {
+                md += `### [${item.sender.toUpperCase()}] (${new Date(item.timestamp).toLocaleTimeString()})\n\n${item.text}\n\n---\n\n`;
+            });
+            const blob = new Blob([md], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Sovereign_AI_Report_${new Date().toISOString().slice(0,10)}.md`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
