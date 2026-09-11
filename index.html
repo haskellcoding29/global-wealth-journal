@@ -1905,40 +1905,133 @@
             document.body.removeChild(ta);
         }
     
+    
     // ==========================================
-    // Sovereign Private AI Chat Engine (GWJ)
+    // Advanced Sovereign Intelligence AI Engine (GWJ)
     // ==========================================
-    const gwjKnowledgeBase = {
-        panama: {
-            title: "🇵🇦 파나마 사익재단(Law 25) 및 0% 영토세 설계",
-            answer: `<strong>1. 0% 영토주의 세제(조세법 제694조)</strong>: 파나마 국경 밖에서 발생하는 해외 주식, 글로벌 배당, 크립토 매매차익, 해외 법인 매출에 대해 <strong>100% 비과세(0%)</strong>가 적용됩니다.<br><br>
-<strong>2. 사익재단(Law 25) 100년 가문 승계</strong>: 주주(소유자)가 존재하지 않는 독립 법인격으로, 비공개 정관(By-laws)을 통해 보호인(Protector)과 수익자를 지정하여 <strong>상속세 0% 영구 승계</strong> 및 채권자 압류 불가(Law 25 제35조) 특권을 가집니다.<br><br>
-👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">1:1 VIP 프라이빗 컨설팅 ($1,500)으로 맞춤 지배구조 설계하기</a>`
+    const gwjKnowledgeGraph = [
+        {
+            category: "cost",
+            keywords: ["비용", "얼마", "가격", "수수료", "예산", "유지비", "금액", "cost", "fee", "price"],
+            title: "💰 파나마 이민·사익재단·법인 설립 공인 비용 총정리",
+            answer: `파나마 1티어 공인 로펌(Kraemer, Pardini) 기준 실비용 안내입니다.<br><br>
+• <strong>1. 사익재단(Law 25) 설립</strong>: 약 <strong>$2,000 ~ $2,800 USD</strong> (정부세 $350, Resident Agent 포함)<br>
+• <strong>2. 우호국 영주권 비자</strong>: 약 <strong>$3,500 ~ $4,800 USD</strong> (변호사비 + 이민청 보증금 $800, 국고 기부금 $250 포함, 투자금 $20만 별도)<br>
+• <strong>3. 파나마 일반 법인(S.A.)</strong>: 약 <strong>$1,600 ~ $2,200 USD</strong><br>
+• <strong>⭐ 3대 턴키 올인원 패키지</strong>: 약 <strong>$7,000 ~ $8,500 USD</strong> (한화 약 950만~1,150만 원)<br>
+• <strong>연간 유지비 (Year 2~)</strong>: 재단+법인 합산 연 <strong>약 $1,300 ~ $1,600 USD</strong> (스위스/싱가포르의 1/20 수준)<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">1:1 VIP 맞춤 진단 및 로펌 우대 매칭 신청 ($1,500)</a>`
         },
-        wyoming: {
-            title: "🇺🇸 미국 와이오밍 LLC + 글로벌 비과세 구조",
-            answer: `<strong>1. Pass-Through 비과세</strong>: 파나마 사익재단이 소유한 와이오밍 Single-Member LLC는 미국 내 상주 직원이나 고정 사업장(ETBUS)이 없을 경우, 미국 밖에서 제공하는 온라인 자문/지식 서비스 수익에 대해 <strong>미국 연방 소득세(ECI) 0%</strong>로 처리됩니다.<br><br>
-<strong>2. 대외 신뢰도 & Stripe 결제</strong>: 미국 법인 명의로 Stripe, Mercury 은행 계좌, 글로벌 계약 체결이 가능하여 신뢰도와 결제 인프라를 완벽히 확보합니다.`
+        {
+            category: "inheritance_tax",
+            keywords: ["상속세", "증여세", "상속", "증여", "50%", "할증", "가문", "승계", "자녀", "부모", "유산"],
+            title: "⚖️ 최고 50% 상속·증여세 완전 방어 & 사익재단 100년 승계",
+            answer: `<strong>1. 대한민국 상속세 위기</strong>: 과표 30억 초과 시 최고세율 <strong>50% (최대주주 할증 시 60%)</strong>로 3대를 거치면 가문 자산의 80% 이상이 국고로 유출됩니다.<br><br>
+<strong>2. 파나마 사익재단(Law 25)의 0% 해법</strong>: 사익재단은 주주(소유자)가 존재하지 않는 독립 법인격입니다. 비공개 정관(By-laws)으로 보호인(대표님)과 수익자(자녀)를 지정하면 <strong>법원 상속 절차(Probate) 없이 상속세 0%로 가문 자산이 영구 승계</strong>됩니다.<br><br>
+<strong>3. 자산 압류 차단(제35조)</strong>: 설립 3년 경과 시 제3자 채권자나 해외 법원 판결로도 재단 자산을 압류할 수 없습니다.<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">사익재단 상속 정관 1:1 맞춤 설계 신청</a>`
         },
-        realfi: {
-            title: "📈 단기 미국 국채 담보 USDM & 온체인 RealFi",
-            answer: `<strong>1. USDM (Mehen)</strong>: 미국 단기 국채 및 현금 1:1 100% 준비금으로 담보된 카르다노 네이티브 스테이블코인입니다.<br><br>
-<strong>2. sUSDrf 수익 창출</strong>: 실물 국채에서 발생하는 연 4~5% 이자를 온체인 스마트 계약을 통해 중개자 없이 보유자에게 직접 분배하는 혁신적 기관급 자산 방어 수단입니다.<br><br>
-👉 <a href="article-realfi-rwa.html" class="text-gold-400 font-bold underline">RealFi 심층 분석 리포트 읽기</a>`
+        {
+            category: "crypto_tax",
+            keywords: ["코인", "비트코인", "가상자산", "크립토", "22%", "과세", "업비트", "빗썸", "바이낸스", "양도세", "디파이", "btc", "eth"],
+            title: "💎 2026-2027 가상자산 22% 과세 대응 & 0% 영토세 합법화",
+            answer: `<strong>1. 가상자산 과세 리스크</strong>: 2026-2027년 가상자산 소득에 대해 22% 분리과세 및 국내외 거래소 트래블룰/해외금융계좌(CRS) 감시망이 전면 가동됩니다.<br><br>
+<strong>2. 파나마 조세법 제694조(영토주의)</strong>: 파나마 세무거주자는 해외 거래소 및 온체인에서 발생한 <strong>비트코인/알트코인 매매차익, 스테이킹 보상, 디파이 일드에 대해 합법적 0% 소득세</strong>를 적용받습니다.<br><br>
+<strong>3. 타워뱅크(Towerbank) 온체인 뱅킹</strong>: 파나마 제도권 은행에서 비트코인/USDT를 USD로 합법 환전하여 글로벌 송금 및 데빗카드로 사용 가능합니다.<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">크립토 자산가 전담 1:1 VIP 세무 진단</a>`
         },
-        cfc: {
-            title: "⚖️ 특정외국법인(CFC) 과세 방어 및 세무거주자 요건",
-            answer: `<strong>1. 실질적 거주 이전</strong>: 한국/일본 세법상 비거주자로 인정받기 위해서는 '주민등록 해외이주', '가족 동반 거주', '파나마 세무거주자 증명서(DGI)'를 확보해야 국세청의 실질과세 시비를 원천 차단할 수 있습니다.<br><br>
-<strong>2. 법인 실체성(Substance)</strong>: 현지 공인 로펌(Kraemer/Pardini) 및 적격 Resident Agent를 통해 정식 컴플라이언스를 갖추어야 CFC 간주과세를 합법적으로 회피합니다.`
+        {
+            category: "japan_exit_tax",
+            keywords: ["일본", "엔화", "국외전출세", "출국세", "15.315%", "엔저", "비거주자", "도쿄", "오사카", "japan"],
+            title: "🇯🇵 일본 국외전출세(15.315%) 및 최고세율 55% 합법 탈출",
+            answer: `<strong>1. 일본 국외전출세 위기</strong>: 출국 직전 10년 중 5년 이상 거주자가 1억 엔 이상의 미실현 주식/크립토를 보유한 경우, 출국 시점에 매도한 것으로 간주하여 <strong>15.315% 강제 과세</strong>됩니다.<br><br>
+<strong>2. 5년 납세유예(Tax Deferral) 전략</strong>: 출국 시 납세관리인을 선임하고 담보를 제공하여 5년간 징수를 유예한 후, 파나마 사익재단으로 자산을 이전하여 5년 경과 시 <strong>일본 과세권을 완전 소멸</strong>시키는 합법 프로토콜을 가동합니다.<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">한·일 출국 및 비거주자 전환 1:1 자문 신청</a>`
         },
-        default: {
-            title: "🏛️ Global Sovereign AI 자산 분석",
-            answer: `문의하신 주제에 대한 핵심 분석입니다.<br><br>
-1. <strong>글로벌 세금 위기(2026-2027)</strong>: 한국의 상속세 최고 50% 및 가상자산 과세, 일본의 국외전출세(15.315%)에 대응하여 <strong>파나마 0% 영토세 및 사익재단(Law 25)</strong>이 가장 강력한 합법 방어 수단입니다.<br><br>
-2. <strong>온체인 뱅킹</strong>: 파나마 타워뱅크(Towerbank) IKKEE 계좌를 통해 비트코인/USDT의 합법적 달러 오프램프가 가능합니다.<br><br>
-자세한 고객 맞춤형 1:1 설계는 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">파나마 VIP 1:1 컨설팅 신청</a>을 이용해 주시기 바랍니다.`
+        {
+            category: "towerbank",
+            keywords: ["타워뱅크", "towerbank", "은행", "계좌", "출금", "환전", "오프램프", "달러", "송금", "ikkee", "ikigai", "데빗카드"],
+            title: "🏦 타워뱅크(Towerbank) 온체인 비트코인·USDT 합법 오프램프",
+            answer: `<strong>1. 파나마 금융감독원(SBP) 공식 인가</strong>: 타워뱅크는 전 세계에서 가장 진보된 크립토 친화 제도권 은행(IKKEE 계좌)입니다.<br><br>
+<strong>2. 자금출처소명(Source of Funds)</strong>: 최초 코인 매수 트랜잭션 해시(TxID) 및 거래소 입출금 내역을 바탕으로 AI 표준 자금출처 소명서를 제출하여 100% 합법 승인을 받습니다.<br><br>
+<strong>3. 무제한 USD 청산 & Visa 플래티넘</strong>: 코인을 달러(USD)로 즉시 청산하여 SWIFT 글로벌 송금 및 전 세계 한도 없는 Visa 카드로 사용할 수 있습니다.<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">타워뱅크 계좌 개설 & 소명서 작성 가이드 신청</a>`
+        },
+        {
+            category: "visa_requirements",
+            keywords: ["비자", "영주권", "우호국", "체류", "183일", "조건", "자격", "서류", "아포스티유", "범죄경력", "cedula"],
+            title: "🇵🇦 파나마 우호국 비자(Friendly Nations Visa) 자격 및 신청 요건",
+            answer: `한국, 일본, 미국 등 50개 우호국 국민 대상 영주권 취득 요건입니다.<br><br>
+• <strong>3대 취득 경로 (택 1)</strong>:<br>
+  1) <strong>부동산 매입</strong>: $200,000 USD 이상 파나마 부동산 매입 (가장 추천)<br>
+  2) <strong>정기예금 예치</strong>: 파나마 국립은행/제도권 은행에 $200,000 USD 3년 만기 예치<br>
+  3) <strong>현지 법인 고용</strong>: 파나마 법인 고용 계약 체결 및 노동부 승인<br><br>
+• <strong>필수 준비 서류</strong>: 여권 공증본, 경찰청 범죄경력회보서(아포스티유 필수), 가족관계증명서(아포스티유).<br>
+• <strong>체류 의무</strong>: 영주권 유지는 <strong>2년에 단 1회 방문</strong>으로 유지 가능합니다.<br><br>
+👉 <a href="panama-consulting.html#faq" class="text-gold-400 font-bold underline">자세한 FAQ 확인 및 1:1 상담 예약</a>`
+        },
+        {
+            category: "wyoming_llc",
+            keywords: ["와이오밍", "미국", "llc", "stripe", "스트라이프", "결제", "법인", "mercury", "달러계좌", "wyoming"],
+            title: "🇺🇸 미국 와이오밍 LLC + 파나마 사익재단 결합 0% 하이브리드 구조",
+            answer: `<strong>1. 글로벌 대외 신뢰도 & Stripe 결제</strong>: 미국 와이오밍 법인은 글로벌 계약 체결과 Stripe 신용카드 결제, Mercury 은행 계좌 개설에 가장 최적화되어 있습니다.<br><br>
+<strong>2. 미국 연방 소득세 0% (Pass-Through)</strong>: 파나마 사익재단이 소유한 와이오밍 Single-Member LLC는 미국 내 고정사업장(ETBUS) 및 상주 직원이 없을 경우 미국 소득세(ECI)가 0%로 처리됩니다.<br><br>
+<strong>3. 이익의 사익재단 100% 이전</strong>: 세후 이익을 파나마 사익재단으로 0% 원천징수로 이전하여 가문 자산으로 영구 축적합니다.<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">미국 LLC + 파나마 사익재단 지배구조 설계 신청</a>`
+        },
+        {
+            category: "realfi_usdm",
+            keywords: ["realfi", "usdm", "스테이블코인", "국채", "일드", "이자", "susdrf", "mehen", "rwa"],
+            title: "💵 미국 단기 국채 100% 담보 USDM & RealFi 기관급 수익",
+            answer: `<strong>1. USDM (Mehen)</strong>: 미국 단기 국채 및 연준 역레포 100% 준비금으로 담보된 카르다노 최초의 기관급 피아트 지원 스테이블코인입니다.<br><br>
+<strong>2. sUSDrf 일드 분배</strong>: 실물 국채에서 발생하는 연 4~5% 수익을 중개자 없이 온체인 스마트 계약으로 지갑에 자동 분배합니다.<br><br>
+👉 <a href="article-realfi-rwa.html" class="text-gold-400 font-bold underline">RealFi & RWA 심층 리포트 보기</a>`
+        },
+        {
+            category: "consulting_info",
+            keywords: ["컨설팅", "예약", "상담", "1:1", "1500", "신청", "진단", "폴고", "paul"],
+            title: "👑 파나마 1:1 VIP 프라이빗 자문 세션 ($1,500) 안내",
+            answer: `미국 와이오밍 법인이 공식 주관하는 <strong>90분 프라이빗 1:1 세션</strong>입니다.<br><br>
+• <strong>포함 내용</strong>:<br>
+  1) 고객 자산 포트폴리오(원화/엔화/달러/크립토)별 1:1 세무 진단<br>
+  2) 한·일 국세청 비거주자 판정 방어 체크리스트 & 실전 일정표<br>
+  3) 파나마 사익재단(Law 25) 비공개 정관 및 지배구조도 설계<br>
+  4) 타워뱅크 자금출처소명 가이드 & 현지 1티어 공인 로펌(Kraemer/Pardini) VIP 직통 매칭<br><br>
+👉 <a href="panama-consulting.html#booking" class="text-gold-400 font-bold underline">지금 바로 1:1 VIP 컨설팅 예약하기 ($1,500)</a>`
         }
-    };
+    ];
+
+    function searchGWJKnowledge(query) {
+        const q = query.toLowerCase().trim();
+        let bestMatch = null;
+        let maxScore = 0;
+
+        for (const item of gwjKnowledgeGraph) {
+            let score = 0;
+            for (const kw of item.keywords) {
+                if (q.includes(kw.toLowerCase())) {
+                    score += 10;
+                }
+            }
+            if (score > maxScore) {
+                maxScore = score;
+                bestMatch = item;
+            }
+        }
+
+        if (bestMatch && maxScore >= 10) {
+            return bestMatch;
+        }
+
+        // Contextual Fallback based on query analysis
+        return {
+            title: `🏛️ '${query}'에 관한 주권 자산 인텔리전스 분석`,
+            answer: `질문하신 <strong>'${query}'</strong>에 대한 전문가 핵심 가이드입니다.<br><br>
+1. <strong>2026-2027 세금 리스크 방어</strong>: 한국 상속세 최고 50% 및 가상자산 과세, 일본 국외전출세에 대응하기 위해 <strong>파나마 0% 영토세 거주권 및 사익재단(Law 25)</strong>이 가장 확실한 합법 솔루션입니다.<br><br>
+2. <strong>구체적 실행 로드맵</strong>: 고객님의 자산 구성(가상자산/해외주식/부동산)에 맞춘 정확한 실전 설계는 <strong>1:1 VIP 맞춤 컨설팅</strong>을 통해 상세히 안내받으실 수 있습니다.<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">1:1 VIP 프라이빗 세무 진단 신청하기 ($1,500)</a>`
+        };
+    }
 
     function toggleGWJPrivateAIModal() {
         const modal = document.getElementById('gwj-private-ai-modal');
@@ -1952,13 +2045,13 @@
 
     function sendGWJQuickPrompt(key) {
         const promptMap = {
-            panama: "파나마 사익재단 0% 영토주의 세무 원리를 설명해 주세요.",
-            wyoming: "미국 와이오밍 LLC와 원격 결제 구조에 대해 알려주세요.",
+            panama: "파나마 사익재단 0% 영토주의 세무 원리와 상속세 방어 구조를 설명해 주세요.",
+            wyoming: "미국 와이오밍 LLC와 Stripe 결제, 원격 계좌 구조에 대해 알려주세요.",
             realfi: "단기 미국 국채 담보 USDM 온체인 달러 일드 구조는 어떻게 되나요?",
-            cfc: "특정외국법인(CFC) 과세 회피 및 거주자 판정 기준을 알려주세요."
+            cfc: "파나마 이민 및 사익재단 설립에 드는 총 변호사 비용은 얼마인가요?"
         };
         const text = promptMap[key] || key;
-        processGWJUserQuery(text, key);
+        processGWJUserQuery(text);
     }
 
     function handleGWJAISubmit(e) {
@@ -1971,11 +2064,11 @@
         processGWJUserQuery(text);
     }
 
-    function processGWJUserQuery(userText, presetKey = null) {
+    function processGWJUserQuery(userText) {
         const msgContainer = document.getElementById('gwj-ai-chat-messages');
         if (!msgContainer) return;
 
-        // Append User Message
+        // User Message
         const userMsgHtml = `
             <div class="flex items-start justify-end gap-2.5">
                 <div class="bg-gold-500/15 border border-gold-500/30 p-3 rounded-2xl rounded-tr-sm text-slate-100 text-xs leading-relaxed max-w-[85%]">
@@ -1989,7 +2082,7 @@
         msgContainer.insertAdjacentHTML('beforeend', userMsgHtml);
         msgContainer.scrollTop = msgContainer.scrollHeight;
 
-        // Typing indicator
+        // Typing Indicator
         const typingId = 'gwj-typing-' + Date.now();
         const typingHtml = `
             <div id="${typingId}" class="flex items-start gap-2.5">
@@ -2006,18 +2099,7 @@
         msgContainer.insertAdjacentHTML('beforeend', typingHtml);
         msgContainer.scrollTop = msgContainer.scrollHeight;
 
-        // Determine Response
-        let key = presetKey;
-        if (!key) {
-            const lower = userText.toLowerCase();
-            if (lower.includes('파나마') || lower.includes('사익재단') || lower.includes('영토세') || lower.includes('비자') || lower.includes('상속세')) key = 'panama';
-            else if (lower.includes('와이오밍') || lower.includes('미국') || lower.includes('llc') || lower.includes('stripe')) key = 'wyoming';
-            else if (lower.includes('realfi') || lower.includes('usdm') || lower.includes('국채') || lower.includes('달러')) key = 'realfi';
-            else if (lower.includes('cfc') || lower.includes('거주자') || lower.includes('국세청') || lower.includes('세금')) key = 'cfc';
-            else key = 'default';
-        }
-
-        const answerObj = gwjKnowledgeBase[key] || gwjKnowledgeBase.default;
+        const result = searchGWJKnowledge(userText);
 
         setTimeout(() => {
             const typingEl = document.getElementById(typingId);
@@ -2029,14 +2111,14 @@
                         🏛️
                     </div>
                     <div class="bg-navy-900/90 border border-slate-800 p-3.5 rounded-2xl rounded-tl-sm text-slate-200 text-xs leading-relaxed max-w-[85%] space-y-2">
-                        <div class="font-bold text-gold-400 text-[11px] pb-1 border-b border-slate-800">${answerObj.title}</div>
-                        <div>${answerObj.answer}</div>
+                        <div class="font-bold text-gold-400 text-[11px] pb-1 border-b border-slate-800">${result.title}</div>
+                        <div>${result.answer}</div>
                     </div>
                 </div>
             `;
             msgContainer.insertAdjacentHTML('beforeend', botMsgHtml);
             msgContainer.scrollTop = msgContainer.scrollHeight;
-        }, 500);
+        }, 400);
     }
 
 </script>
