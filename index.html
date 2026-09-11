@@ -158,6 +158,10 @@
                 </nav>
 
                 <div class="flex items-center space-x-3">
+                    <button onclick="toggleGWJPrivateAIModal()"
+                        class="bg-gradient-to-r from-gold-500/20 to-amber-500/20 hover:from-gold-500/30 hover:to-amber-500/30 text-gold-400 border border-gold-500/40 font-bold text-xs px-3.5 py-2 rounded-md transition flex items-center shadow-sm">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 text-yellow-300 animate-pulse"></i> AI 챗봇
+                    </button>
                     <button id="search-btn"
                         class="bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs px-3.5 py-2 rounded-md border border-slate-700 transition flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400">
                         <i data-lucide="search" class="w-3.5 h-3.5 mr-1.5"></i> 검색
@@ -1900,7 +1904,142 @@
             }
             document.body.removeChild(ta);
         }
-    </script>
+    
+    // ==========================================
+    // Sovereign Private AI Chat Engine (GWJ)
+    // ==========================================
+    const gwjKnowledgeBase = {
+        panama: {
+            title: "🇵🇦 파나마 사익재단(Law 25) 및 0% 영토세 설계",
+            answer: `<strong>1. 0% 영토주의 세제(조세법 제694조)</strong>: 파나마 국경 밖에서 발생하는 해외 주식, 글로벌 배당, 크립토 매매차익, 해외 법인 매출에 대해 <strong>100% 비과세(0%)</strong>가 적용됩니다.<br><br>
+<strong>2. 사익재단(Law 25) 100년 가문 승계</strong>: 주주(소유자)가 존재하지 않는 독립 법인격으로, 비공개 정관(By-laws)을 통해 보호인(Protector)과 수익자를 지정하여 <strong>상속세 0% 영구 승계</strong> 및 채권자 압류 불가(Law 25 제35조) 특권을 가집니다.<br><br>
+👉 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">1:1 VIP 프라이빗 컨설팅 ($1,500)으로 맞춤 지배구조 설계하기</a>`
+        },
+        wyoming: {
+            title: "🇺🇸 미국 와이오밍 LLC + 글로벌 비과세 구조",
+            answer: `<strong>1. Pass-Through 비과세</strong>: 파나마 사익재단이 소유한 와이오밍 Single-Member LLC는 미국 내 상주 직원이나 고정 사업장(ETBUS)이 없을 경우, 미국 밖에서 제공하는 온라인 자문/지식 서비스 수익에 대해 <strong>미국 연방 소득세(ECI) 0%</strong>로 처리됩니다.<br><br>
+<strong>2. 대외 신뢰도 & Stripe 결제</strong>: 미국 법인 명의로 Stripe, Mercury 은행 계좌, 글로벌 계약 체결이 가능하여 신뢰도와 결제 인프라를 완벽히 확보합니다.`
+        },
+        realfi: {
+            title: "📈 단기 미국 국채 담보 USDM & 온체인 RealFi",
+            answer: `<strong>1. USDM (Mehen)</strong>: 미국 단기 국채 및 현금 1:1 100% 준비금으로 담보된 카르다노 네이티브 스테이블코인입니다.<br><br>
+<strong>2. sUSDrf 수익 창출</strong>: 실물 국채에서 발생하는 연 4~5% 이자를 온체인 스마트 계약을 통해 중개자 없이 보유자에게 직접 분배하는 혁신적 기관급 자산 방어 수단입니다.<br><br>
+👉 <a href="article-realfi-rwa.html" class="text-gold-400 font-bold underline">RealFi 심층 분석 리포트 읽기</a>`
+        },
+        cfc: {
+            title: "⚖️ 특정외국법인(CFC) 과세 방어 및 세무거주자 요건",
+            answer: `<strong>1. 실질적 거주 이전</strong>: 한국/일본 세법상 비거주자로 인정받기 위해서는 '주민등록 해외이주', '가족 동반 거주', '파나마 세무거주자 증명서(DGI)'를 확보해야 국세청의 실질과세 시비를 원천 차단할 수 있습니다.<br><br>
+<strong>2. 법인 실체성(Substance)</strong>: 현지 공인 로펌(Kraemer/Pardini) 및 적격 Resident Agent를 통해 정식 컴플라이언스를 갖추어야 CFC 간주과세를 합법적으로 회피합니다.`
+        },
+        default: {
+            title: "🏛️ Global Sovereign AI 자산 분석",
+            answer: `문의하신 주제에 대한 핵심 분석입니다.<br><br>
+1. <strong>글로벌 세금 위기(2026-2027)</strong>: 한국의 상속세 최고 50% 및 가상자산 과세, 일본의 국외전출세(15.315%)에 대응하여 <strong>파나마 0% 영토세 및 사익재단(Law 25)</strong>이 가장 강력한 합법 방어 수단입니다.<br><br>
+2. <strong>온체인 뱅킹</strong>: 파나마 타워뱅크(Towerbank) IKKEE 계좌를 통해 비트코인/USDT의 합법적 달러 오프램프가 가능합니다.<br><br>
+자세한 고객 맞춤형 1:1 설계는 <a href="panama-consulting.html" class="text-gold-400 font-bold underline">파나마 VIP 1:1 컨설팅 신청</a>을 이용해 주시기 바랍니다.`
+        }
+    };
+
+    function toggleGWJPrivateAIModal() {
+        const modal = document.getElementById('gwj-private-ai-modal');
+        if (!modal) return;
+        modal.classList.toggle('hidden');
+        if (!modal.classList.contains('hidden')) {
+            const input = document.getElementById('gwj-ai-user-input');
+            if (input) setTimeout(() => input.focus(), 100);
+        }
+    }
+
+    function sendGWJQuickPrompt(key) {
+        const promptMap = {
+            panama: "파나마 사익재단 0% 영토주의 세무 원리를 설명해 주세요.",
+            wyoming: "미국 와이오밍 LLC와 원격 결제 구조에 대해 알려주세요.",
+            realfi: "단기 미국 국채 담보 USDM 온체인 달러 일드 구조는 어떻게 되나요?",
+            cfc: "특정외국법인(CFC) 과세 회피 및 거주자 판정 기준을 알려주세요."
+        };
+        const text = promptMap[key] || key;
+        processGWJUserQuery(text, key);
+    }
+
+    function handleGWJAISubmit(e) {
+        if (e) e.preventDefault();
+        const input = document.getElementById('gwj-ai-user-input');
+        if (!input) return;
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = '';
+        processGWJUserQuery(text);
+    }
+
+    function processGWJUserQuery(userText, presetKey = null) {
+        const msgContainer = document.getElementById('gwj-ai-chat-messages');
+        if (!msgContainer) return;
+
+        // Append User Message
+        const userMsgHtml = `
+            <div class="flex items-start justify-end gap-2.5">
+                <div class="bg-gold-500/15 border border-gold-500/30 p-3 rounded-2xl rounded-tr-sm text-slate-100 text-xs leading-relaxed max-w-[85%]">
+                    ${userText}
+                </div>
+                <div class="w-7 h-7 rounded-lg bg-gold-500/30 flex items-center justify-center text-black font-bold text-xs shrink-0">
+                    YOU
+                </div>
+            </div>
+        `;
+        msgContainer.insertAdjacentHTML('beforeend', userMsgHtml);
+        msgContainer.scrollTop = msgContainer.scrollHeight;
+
+        // Typing indicator
+        const typingId = 'gwj-typing-' + Date.now();
+        const typingHtml = `
+            <div id="${typingId}" class="flex items-start gap-2.5">
+                <div class="w-7 h-7 rounded-lg bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 text-xs">
+                    🏛️
+                </div>
+                <div class="bg-navy-900/90 border border-slate-800 p-3 rounded-2xl rounded-tl-sm text-slate-400 text-xs flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-bounce"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-bounce" style="animation-delay: 0.2s"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-bounce" style="animation-delay: 0.4s"></span>
+                </div>
+            </div>
+        `;
+        msgContainer.insertAdjacentHTML('beforeend', typingHtml);
+        msgContainer.scrollTop = msgContainer.scrollHeight;
+
+        // Determine Response
+        let key = presetKey;
+        if (!key) {
+            const lower = userText.toLowerCase();
+            if (lower.includes('파나마') || lower.includes('사익재단') || lower.includes('영토세') || lower.includes('비자') || lower.includes('상속세')) key = 'panama';
+            else if (lower.includes('와이오밍') || lower.includes('미국') || lower.includes('llc') || lower.includes('stripe')) key = 'wyoming';
+            else if (lower.includes('realfi') || lower.includes('usdm') || lower.includes('국채') || lower.includes('달러')) key = 'realfi';
+            else if (lower.includes('cfc') || lower.includes('거주자') || lower.includes('국세청') || lower.includes('세금')) key = 'cfc';
+            else key = 'default';
+        }
+
+        const answerObj = gwjKnowledgeBase[key] || gwjKnowledgeBase.default;
+
+        setTimeout(() => {
+            const typingEl = document.getElementById(typingId);
+            if (typingEl) typingEl.remove();
+
+            const botMsgHtml = `
+                <div class="flex items-start gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 text-xs">
+                        🏛️
+                    </div>
+                    <div class="bg-navy-900/90 border border-slate-800 p-3.5 rounded-2xl rounded-tl-sm text-slate-200 text-xs leading-relaxed max-w-[85%] space-y-2">
+                        <div class="font-bold text-gold-400 text-[11px] pb-1 border-b border-slate-800">${answerObj.title}</div>
+                        <div>${answerObj.answer}</div>
+                    </div>
+                </div>
+            `;
+            msgContainer.insertAdjacentHTML('beforeend', botMsgHtml);
+            msgContainer.scrollTop = msgContainer.scrollHeight;
+        }, 500);
+    }
+
+</script>
 </body>
 
 </html>
