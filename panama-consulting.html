@@ -65,7 +65,10 @@
                     <i data-lucide="arrow-left" class="w-3.5 h-3.5 mr-1"></i> 저널 홈
                 </a>
                 <a href="#calculator" class="hidden sm:inline-flex bg-slate-800 hover:bg-slate-700 text-gold-400 border border-gold-500/40 font-bold px-3 py-1.5 rounded-full text-xs transition">
-                    💡 무료 자산 진단기
+                    💡 자산 진단기
+                </a>
+                <a href="#faq" class="hidden sm:inline-flex text-slate-300 hover:text-gold-400 font-medium text-xs transition">
+                    자주 묻는 질문(FAQ)
                 </a>
                 <a href="#booking" class="bg-gold-500 hover:bg-gold-400 text-black font-extrabold px-4 py-1.5 rounded-full text-xs transition shadow-lg shadow-gold-500/20">
                     VIP 컨설팅 예약 ($1,500)
@@ -290,6 +293,133 @@
         </div>
     </section>
 
+    
+    <!-- FAQ SECTION (BASED ON OFFICIAL PUBLIC MANUAL) -->
+    <section id="faq" class="py-16 px-4 max-w-4xl mx-auto border-t border-slate-800/80">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">OFFICIAL PUBLIC INTELLIGENCE FAQ</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-100 mt-1">자주 묻는 질문 (FAQ)</h2>
+            <p class="text-xs text-slate-400 mt-2">파나마 이민청 및 조세법 공공 매뉴얼에 기반한 핵심 질문과 답변입니다.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden transition">
+                <button type="button" onclick="toggleFaq(1)" class="w-full p-5 text-left flex justify-between items-center text-slate-100 font-bold text-sm hover:text-gold-400">
+                    <span class="flex items-center">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-gold-500 mr-2.5 flex-shrink-0"></i>
+                        Q1. 파나마 우호국 비자(Friendly Nations Visa)의 기본 신청 자격과 3대 경로는 무엇인가요?
+                    </span>
+                    <i id="faq-icon-1" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-1" class="px-5 pb-5 text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800/50 pt-3">
+                    한국, 일본, 미국 등 50개 적격국 국적자가 대상이며, 2021년 개정법(행정명령 197호)에 따라 다음 3가지 경로 중 하나를 선택할 수 있습니다.<br>
+                    1) <strong>부동산 매입 경로</strong>: $200,000 USD 이상의 파나마 부동산(아파트/상가/토지) 매입 (가장 일반적)<br>
+                    2) <strong>정기예금 경로</strong>: 파나마 국립은행 또는 제도권 은행에 $200,000 USD 이상 3년 만기 정기예금 예치<br>
+                    3) <strong>현지 법인 고용 스폰서</strong>: 파나마 현지 법인과의 고용 계약 체결 및 노동부(MITRADEL) 승인<br>
+                    신청 시 2년 임시 거주증을 취득한 후 영구 영주권(Cédula E)으로 최종 전환됩니다.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden transition">
+                <button type="button" onclick="toggleFaq(2)" class="w-full p-5 text-left flex justify-between items-center text-slate-100 font-bold text-sm hover:text-gold-400">
+                    <span class="flex items-center">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-gold-500 mr-2.5 flex-shrink-0"></i>
+                        Q2. 파나마의 '0% 영토주의 세제(Territorial Tax)'는 어떤 소득에 적용되나요?
+                    </span>
+                    <i id="faq-icon-2" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-2" class="px-5 pb-5 text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800/50 pt-3">
+                    파나마 조세법 제694조(Código Fiscal Art. 694)에 의거, <strong>파나마 국경 밖에서 발생한 모든 소득은 소득세 0%(완전 비과세)</strong>입니다.<br>
+                    • 해외 주식 및 글로벌 ETF 매매차익 / 배당 소득: <strong>0%</strong><br>
+                    • 비트코인, 이더리움, 가상자산 트레이딩 및 디파이 수익: <strong>0%</strong><br>
+                    • 해외 법인 및 온라인 비즈니스 매출: <strong>0%</strong><br>
+                    싱가포르나 두바이와 달리 복잡한 경제적 실질 요건 규제가 매우 유연하여 전 세계 디지털 노마드 및 자산가들에게 최고의 관할권으로 평가받습니다.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden transition">
+                <button type="button" onclick="toggleFaq(3)" class="w-full p-5 text-left flex justify-between items-center text-slate-100 font-bold text-sm hover:text-gold-400">
+                    <span class="flex items-center">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-gold-500 mr-2.5 flex-shrink-0"></i>
+                        Q3. 파나마 사익재단(Law 25)은 일반 주식회사와 어떻게 다르며 왜 상속세가 0%인가요?
+                    </span>
+                    <i id="faq-icon-3" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-3" class="px-5 pb-5 text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800/50 pt-3">
+                    일반 법인은 주주(Shareholder)가 존재하여 주주 사망 시 상속세 과세 대상이 되지만, <strong>파나마 사익재단은 '소유자/주주'가 존재하지 않는 독립 법인격</strong>입니다.<br>
+                    • <strong>상속세 0%</strong>: 비공개 정관(By-laws)을 통해 보호인(Protector)과 수익자(Beneficiary)를 지정하여, 법원 상속 절차(Probate) 없이 가문 자산이 영구 승계됩니다.<br>
+                    • <strong>자산 압류 불가 (Law 25 제35조)</strong>: 재단 설립 3년이 지나면 사기파산 소송 시효가 만료되어, 제3자 채권자나 해외 법원 판결로도 재단 자산을 압류할 수 없습니다.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden transition">
+                <button type="button" onclick="toggleFaq(4)" class="w-full p-5 text-left flex justify-between items-center text-slate-100 font-bold text-sm hover:text-gold-400">
+                    <span class="flex items-center">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-gold-500 mr-2.5 flex-shrink-0"></i>
+                        Q4. 한국/일본에서 출국 전 미리 준비해야 하는 필수 공공 서류는 무엇인가요?
+                    </span>
+                    <i id="faq-icon-4" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-4" class="px-5 pb-5 text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800/50 pt-3">
+                    파나마 이민청 제출을 위해 다음 3대 서류를 한국/일본에서 사전 준비하셔야 합니다.<br>
+                    1) <strong>여권 원본 및 전 페이지 공증본</strong> (유효기간 6개월 이상)<br>
+                    2) <strong>경찰청 범죄경력회보서</strong>: <strong>아포스티유(Apostille)</strong> 인증 필수 (발급 6개월 이내)<br>
+                    3) <strong>가족관계증명서 & 기본증명서</strong> (동반 가족 신청 시): 아포스티유 인증 필수<br>
+                    *신체검사서(혈액/HIV/마약 검사)는 파나마 현지 도착 후 제휴 병원에서 당일 간단히 발급받으실 수 있습니다.
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden transition">
+                <button type="button" onclick="toggleFaq(5)" class="w-full p-5 text-left flex justify-between items-center text-slate-100 font-bold text-sm hover:text-gold-400">
+                    <span class="flex items-center">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-gold-500 mr-2.5 flex-shrink-0"></i>
+                        Q5. 영주권을 유지하려면 파나마에 1년 내내 계속 거주해야 하나요?
+                    </span>
+                    <i id="faq-icon-5" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-5" class="px-5 pb-5 text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800/50 pt-3">
+                    파나마 영주권 자체를 유지하기 위한 법적 최소 체류 조건은 <strong>2년에 최소 1회(단 1~2일 방문도 인정)</strong>로 전 세계에서 가장 유연합니다.<br>
+                    단, 본국(한국 국세청/일본 세무서)의 거주자 시비를 법적으로 완벽 차단하고 0% 세무 혜택을 온전히 누리기 위해서는 <strong>파나마 세무거주자 증명서(DGI) 발급 요건(연간 183일 체류 또는 중심 생활관계 확보)</strong>을 맞추는 것이 안전하며, 1:1 VIP 컨설팅에서 고객별 최적 일정표를 설계해 드립니다.
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden transition">
+                <button type="button" onclick="toggleFaq(6)" class="w-full p-5 text-left flex justify-between items-center text-slate-100 font-bold text-sm hover:text-gold-400">
+                    <span class="flex items-center">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-gold-500 mr-2.5 flex-shrink-0"></i>
+                        Q6. 비트코인이나 USDT 같은 가상자산을 파나마 은행에서 합법적으로 달러 출금할 수 있나요?
+                    </span>
+                    <i id="faq-icon-6" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-6" class="px-5 pb-5 text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800/50 pt-3">
+                    네, 파나마 금융감독원(SBP) 인가 은행인 <strong>타워뱅크(Towerbank)</strong>는 공식 크립토 친화 계좌(IKKEE)를 지원합니다.<br>
+                    합법적인 자금출처 소명(Source of Funds) 절차를 거치면 비트코인/USDT를 달러(USD)로 즉시 환전하여 스위프트(SWIFT) 글로벌 송금 및 전 세계 Visa 플래티넘 카드로 제한 없이 사용하실 수 있습니다.
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden transition">
+                <button type="button" onclick="toggleFaq(7)" class="w-full p-5 text-left flex justify-between items-center text-slate-100 font-bold text-sm hover:text-gold-400">
+                    <span class="flex items-center">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-gold-500 mr-2.5 flex-shrink-0"></i>
+                        Q7. 무료 공개 정보와 1:1 VIP 컨설팅($1,500)의 차이는 무엇인가요?
+                    </span>
+                    <i id="faq-icon-7" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-ans-7" class="px-5 pb-5 text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800/50 pt-3">
+                    무료 FAQ는 일반적인 공공 법령 기준을 안내하는 자료입니다.<br>
+                    <strong>1:1 VIP 컨설팅($1,500)</strong>은 미국 와이오밍 법인 자문 주관 하에 <strong>고객님의 실제 자산 포트폴리오(가상자산/해외주식/부동산 등)에 맞춘 국세청 비거주자 전환 판정 방어 전략, 사익재단 비공개 정관(By-laws) 맞춤 설계, 타워뱅크 자금출처소명서 작성, 현지 1티어 로펌(Kraemer/Pardini) VIP 직통 매칭</strong> 등 '즉시 실행 가능한 비공개 알파 솔루션'을 1:1로 밀착 제공합니다.
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Booking & Automated Submission Form Section -->
     <section id="booking" class="py-16 px-4 bg-gradient-to-b from-navy-950 to-navy-900 border-t border-slate-800">
         <div class="max-w-2xl mx-auto">
@@ -392,6 +522,19 @@
 
     <script>
         lucide.createIcons();
+
+        function toggleFaq(id) {
+            const ans = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                ans.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
 
         // Quiz State
         const quizData = {
