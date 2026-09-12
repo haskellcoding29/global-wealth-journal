@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이더리움은 5조 털렸는데, 왜 카르다노는 0원도 안 털렸을까? [하스켈 바이블 1장] | The Global Sovereign Wealth Journal</title>
+    <meta name="description"
+        content="초등학생도 이해하는 1,300p 하스켈 바이블 제1장: 지우개가 없는 세상의 불변성과 순수 함수. 메타와 카르다노의 무결점 소프트웨어 비밀.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+    <link rel="canonical" href="article-haskell-bible-01.html">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 400: '#dfb743', 500: '#c59b27', 600: '#9e751a' },
+                        navy: { 900: '#070d19', 950: '#030712' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy-950 text-slate-200 font-sans min-h-screen flex flex-col antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-navy-950/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded bg-gold-500 flex items-center justify-center text-black font-black text-sm">GS</div>
+                <span class="font-serif text-lg font-bold text-slate-100 hover:text-gold-400 transition">The Global Sovereign</span>
+            </a>
+            <div class="flex items-center space-x-4">
+                <span class="hidden sm:inline-block text-xs px-2.5 py-1 rounded bg-gold-500/10 text-gold-400 border border-gold-500/30">📖 하스켈 & 아우라 바이블 매일 연재관</span>
+                <a href="index.html" class="text-xs text-slate-400 hover:text-gold-400 flex items-center">
+                    <i data-lucide="arrow-left" class="w-3.5 h-3.5 mr-1"></i> 메인으로
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="max-w-4xl mx-auto px-4 py-12 flex-grow">
+        <!-- Category & Title -->
+        <div class="mb-8">
+            <div class="flex items-center space-x-2 text-xs text-gold-400 font-semibold mb-3">
+                <span class="bg-gold-500/10 px-2.5 py-1 rounded border border-gold-500/20">HASKELL & GEN 5 BLOCKCHAIN BIBLE • CHAPTER 01</span>
+                <span>•</span>
+                <span class="text-slate-400">2026-09-11 연재</span>
+            </div>
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-100 leading-tight mb-6">
+                이더리움은 5조 털렸는데,<br>
+                <span class="text-gold-400">왜 카르다노는 0원도 안 털렸을까?</span>
+            </h1>
+            <p class="text-base text-slate-300 leading-relaxed border-l-2 border-gold-500 pl-4 py-1">
+                "산 아래에서 벽돌을 나를 때는 담장 하나 짓는 줄 알았지만, 정상에 서서 보니 '아우라'라는 거대한 성채의 단단한 성벽이었습니다." — 저자 Paul Ko 서문 중에서
+            </p>
+        </div>
+
+        <!-- Ad Slot Top -->
+        <div class="my-6 p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center text-xs text-slate-500 flex items-center justify-center min-h-[90px]">
+            <span>💡 Google AdSense High-CPC 테크 광고 영역</span>
+        </div>
+
+        <!-- Body -->
+        <div class="prose prose-invert max-w-none text-slate-300 space-y-6 text-sm sm:text-base leading-relaxed">
+            
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-100 font-serif border-b border-slate-800 pb-2">
+                1. ✏️ 연필과 지우개 vs 돌에 새긴 글씨
+            </h2>
+            <p>
+                우리가 쓰는 일반적인 프로그래밍 언어(파이썬, 자바 등)와 <strong>하스켈(Haskell)</strong>의 가장 결정적인 차이는 딱 하나입니다. 바로 <strong>"지우개가 있느냐, 없느냐"</strong>입니다.
+            </p>
+            <p>
+                일반적인 언어는 칠판에 적힌 글씨와 같습니다. 선생님이 <code class="text-gold-400 bg-slate-900 px-1.5 py-0.5 rounded">사과 = 5개</code>라고 적어두었는데, 지나가던 학생이 지우개로 슥 지우고 <code class="text-gold-400 bg-slate-900 px-1.5 py-0.5 rounded">사과 = 0개</code>로 바꿀 수 있습니다. 그러면 처음 사과를 5개로 알고 있던 다른 친구들은 큰 혼란에 빠집니다. <em>"어? 아까 5개였는데 왜 갑자기 0개야?"</em>
+            </p>
+            <p>
+                이것이 컴퓨터 프로그램에서 일어나는 <strong>'버그(오류)'와 금융 시스템 '해킹'의 90% 원인</strong>입니다.
+            </p>
+
+            <div class="bg-gradient-to-r from-slate-900 via-navy-900 to-slate-900 p-6 rounded-2xl border border-gold-500/30 my-6 shadow-xl">
+                <h3 class="text-gold-400 font-bold text-base mb-2 flex items-center">
+                    <i data-lucide="shield-check" class="w-5 h-5 mr-2"></i> 하스켈 마을에는 지우개가 없다! (불변성)
+                </h3>
+                <p class="text-sm text-slate-300">
+                    하스켈은 칠판 대신 <strong>단단한 바위(돌판)</strong>에 글씨를 새깁니다. 한 번 <code class="text-gold-400">사과 = 5개</code>라고 새기면 지구 끝날 때까지 영원히 5개입니다. 만약 6개가 필요하다면? 기존 돌판을 고치지 않고, 새 돌판에 <code class="text-gold-400">새사과 = 사과 + 1</code>을 새롭게 조각합니다. 원래의 사과는 영원히 지켜집니다.
+                </p>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-100 font-serif border-b border-slate-800 pb-2">
+                2. 🥤 정직한 붕어빵 자판기 (순수 함수)
+            </h2>
+            <p>
+                하스켈의 함수는 <strong>'정직한 붕어빵 자판기'</strong>입니다. 팥 반죽을 넣으면 오늘 넣든, 내일 넣든, 비가 오든 상관없이 언제나 똑같은 팥 붕어빵이 나옵니다.
+            </p>
+            <p>
+                그리고 붕어빵을 구우면서 갑자기 주방 벽지를 찢거나 불을 끄는 엉뚱한 짓(부작용, Side-Effect)을 절대 하지 않습니다. 이것을 <strong>순수 함수(Pure Function)</strong>라고 부르며, 1원의 오차도 용납하지 않는 금융과 블록체인의 절대 안전을 보장합니다.
+            </p>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-100 font-serif border-b border-slate-800 pb-2">
+                3. 🌐 글로벌 실전 개발 사례 (Case Study)
+            </h2>
+            <ul class="space-y-3 text-sm">
+                <li class="flex items-start">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold-400 mr-2 mt-1 flex-shrink-0"></i>
+                    <div>
+                        <strong class="text-slate-100">카르다노(Cardano) eUTxO 원장:</strong>
+                        이더리움은 잔고를 메모리에서 직접 지우개로 덮어쓰다 매년 수조 원의 재진입성 해킹을 당합니다. 반면 카르다노는 하스켈의 불변성 박스(eUTxO) 모델로 <strong>온체인 해킹 $0</strong>를 기록 중입니다.
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold-400 mr-2 mt-1 flex-shrink-0"></i>
+                    <div>
+                        <strong class="text-slate-100">메타(페이스북) Haxl 엔진:</strong>
+                        30억 사용자의 스팸과 공격을 실시간 방어하기 위해 수천 명의 엔지니어 규칙이 충돌하지 않는 하스켈 순수 함수형 엔진을 구축했습니다.
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 4-Way Evolution Comparison Table -->
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-100 font-serif border-b border-slate-800 pb-2 pt-4">
+                4. 💡 진화의 다리: Haskell ➔ Rust ➔ Aiken ➔ Cardano
+            </h2>
+            <div class="overflow-x-auto my-6">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                    <thead>
+                        <tr class="border-b border-slate-700 bg-slate-900/80 text-gold-400">
+                            <th class="p-3">비교 항목</th>
+                            <th class="p-3">🏛️ Haskell (뿌리)</th>
+                            <th class="p-3">⚡ Rust (진화)</th>
+                            <th class="p-3">🧩 Aiken (직관)</th>
+                            <th class="p-3">🚀 Cardano/Aura 반영</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr>
+                            <td class="p-3 font-bold text-slate-200">불변성 철학</td>
+                            <td class="p-3">기본 100% 불변</td>
+                            <td class="p-3">기본 불변 (`let`), 필요시 `mut`</td>
+                            <td class="p-3">기본 100% 불변 상수</td>
+                            <td class="p-3 text-gold-400 font-semibold">거래 장부의 영구 불변성</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-bold text-slate-200">함수 순수성</td>
+                            <td class="p-3">부작용(IO) 엄격 격리</td>
+                            <td class="p-3">소유권 검사로 공유 차단</td>
+                            <td class="p-3">온체인 Validator 순수성</td>
+                            <td class="p-3 text-gold-400 font-semibold">수수료 100% 사전 결정론적 계산</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Interactive Quiz Section -->
+            <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 my-8">
+                <h3 class="text-gold-400 font-bold text-base mb-3 flex items-center">
+                    <i data-lucide="help-circle" class="w-5 h-5 mr-2"></i> 🎯 [1분 마스터 퀴즈] 이해도를 확인해 보세요!
+                </h3>
+                <p class="text-sm text-slate-200 mb-4">
+                    <strong>Q. 하스켈에서 '불변성(Immutability)'이 블록체인에서 최고의 무기인 이유는 무엇일까요?</strong>
+                </p>
+                <div class="space-y-2">
+                    <button onclick="checkQuiz(1)" class="w-full text-left p-3 rounded-lg bg-navy-950 border border-slate-800 hover:border-gold-500/50 text-xs sm:text-sm text-slate-300 transition flex items-center justify-between">
+                        <span>① 거래 내역을 지우개로 언제든 고칠 수 있어서 편리하기 때문에</span>
+                        <span id="opt1-icon"></span>
+                    </button>
+                    <button onclick="checkQuiz(2)" class="w-full text-left p-3 rounded-lg bg-navy-950 border border-slate-800 hover:border-gold-500/50 text-xs sm:text-sm text-slate-300 transition flex items-center justify-between">
+                        <span>② 한 번 기록된 장부는 절대로 변하거나 위변조될 수 없기 때문에</span>
+                        <span id="opt2-icon"></span>
+                    </button>
+                </div>
+                <div id="quiz-result" class="mt-4 p-3 rounded-lg text-xs hidden"></div>
+            </div>
+
+            <!-- Next Chapter Preview CTA -->
+            <div class="bg-gradient-to-r from-gold-500/10 via-slate-900 to-navy-950 p-6 rounded-2xl border border-gold-500/30 text-center my-8">
+                <span class="text-xs text-gold-400 font-bold tracking-wider uppercase">Next Chapter Preview</span>
+                <h3 class="text-lg font-bold text-slate-100 mt-1 mb-2">제2장: 람다(Lambda)의 비밀 — 이름표 없는 마법 기계</h3>
+                <p class="text-xs text-slate-400 mb-4">페이스북이 30억 명의 해킹을 0.001초 만에 막아낸 일회용 종이컵 기계의 비밀이 내일 연재됩니다.</p>
+                <a href="index.html" class="inline-flex items-center px-4 py-2 rounded-lg bg-gold-500 text-black font-bold text-xs hover:bg-gold-400 transition">
+                    매일 연재 알림 받기 <i data-lucide="bell" class="w-3.5 h-3.5 ml-1.5"></i>
+                </a>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-navy-950 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="mb-2">© 2026 The Global Sovereign Wealth Journal & Paul Ko Sovereign Enterprise. All rights reserved.</p>
+            <p>본 연재물은 5세대 블록체인 '아우라(Aura)' 프로젝트 및 카르다노 공식 앰버서더 교육 이니셔티브의 일환으로 발행됩니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function checkQuiz(choice) {
+            const res = document.getElementById('quiz-result');
+            res.classList.remove('hidden', 'bg-red-900/30', 'border-red-500/30', 'text-red-300', 'bg-emerald-900/30', 'border-emerald-500/30', 'text-emerald-300');
+            
+            if (choice === 2) {
+                res.classList.add('bg-emerald-900/30', 'border', 'border-emerald-500/30', 'text-emerald-300');
+                res.innerHTML = "🎉 <strong>정답입니다! 100점!</strong> 하스켈에는 지우개가 없기 때문에 한 번 기록된 장부는 위변조가 불가능한 절대 안전을 보장합니다.";
+            } else {
+                res.classList.add('bg-red-900/30', 'border', 'border-red-500/30', 'text-red-300');
+                res.innerHTML = "❌ <strong>다시 생각해 보세요!</strong> 지우개로 고칠 수 있는 세상은 해킹과 버그가 발생하는 원인입니다. 하스켈은 '영원히 바뀌지 않는 불변성'을 지향합니다.";
+            }
+        }
+    </script>
+</body>
+
+</html>
